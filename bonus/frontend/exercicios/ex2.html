@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Classificador de Spam</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Voltar ao Menu</a>
+
+        <header>
+            <h1>Exercício 2: Classificador de Spam</h1>
+            <p>Classifica mensagens SMS como spam ou legítimas</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="mensagem">Digite a mensagem SMS:</label>
+                <textarea id="mensagem" placeholder="Digite a mensagem SMS para classificar...&#10;&#10;Exemplo:&#10;Congratulations! You've won a free iPhone. Click here to claim your prize now!"></textarea>
+            </div>
+
+            <button id="btnClassificar" class="btn btn-primary">Classificar Mensagem</button>
+
+            <div id="resultado" style="display: none;">
+                <div class="result-box">
+                    <h3>Resultado da Classificação:</h3>
+                    <div id="classificacao"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script>
+        const API_URL = `${API_URLS.ex2}/classificar`;
+
+        document.getElementById('btnClassificar').addEventListener('click', async () => {
+            const mensagem = document.getElementById('mensagem').value;
+            const btn = document.getElementById('btnClassificar');
+            const resultado = document.getElementById('resultado');
+
+            if (!mensagem.trim()) {
+                alert('Por favor, digite uma mensagem para classificar.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="loading"></span>Classificando...';
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ mensagem })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    mostrarResultado(data);
+                } else {
+                    alert('Erro: ' + (data.erro || 'Erro desconhecido'));
+                }
+            } catch (error) {
+                alert('Erro ao conectar com a API: ' + error.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = 'Classificar Mensagem';
+            }
+        });
+
+        function mostrarResultado(data) {
+            const classificacao = document.getElementById('classificacao');
+            const resultado = document.getElementById('resultado');
+
+            const isSpam = data.classificacao === 'spam';
+            const cor = isSpam ? 'var(--accent-color)' : 'var(--success-color)';
+            const icone = isSpam ? '⚠️' : '✅';
+            const confianca = (data.confianca * 100).toFixed(2);
+
+            classificacao.innerHTML = `
+                <div style="padding: 20px; background: ${isSpam ? 'rgba(255,75,75,0.15)' : 'rgba(33,195,84,0.15)'}; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">${icone}</div>
+                    <h2 style="color: ${cor}; margin-bottom: 10px;">${data.classificacao.toUpperCase()}</h2>
+                    <p style="color: var(--text-secondary);">Confiança: ${confianca}%</p>
+                </div>
+            `;
+
+            resultado.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

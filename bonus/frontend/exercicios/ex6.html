@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Assistente RAG</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Voltar ao Menu</a>
+
+        <header>
+            <h1>Exercício 6: Assistente RAG - Normas Técnicas</h1>
+            <p>Consulta de normas técnicas com citação de fontes</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="pergunta">Digite sua pergunta sobre normas técnicas:</label>
+                <textarea id="pergunta" rows="4" placeholder="Exemplo:&#10;Qual a altura mínima para instalação de tomadas elétricas?"></textarea>
+            </div>
+
+            <button id="btnConsultar" class="btn btn-primary">Consultar Normas</button>
+
+            <div id="resultado" style="display: none;">
+                <div class="result-box">
+                    <h3>Resposta:</h3>
+                    <div id="resposta" style="line-height: 1.8;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <h3 style="margin-bottom: 16px;">Exemplos de Consultas:</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 12px;">
+                    <button class="exemplo-btn" style="background: none; border: 1px solid var(--border-color); color: var(--text-primary); padding: 12px; border-radius: 8px; width: 100%; text-align: left; cursor: pointer; transition: all 0.2s;"
+                            data-pergunta="Qual a altura mínima para instalação de tomadas elétricas?">
+                        📌 Qual a altura mínima para instalação de tomadas elétricas?
+                    </button>
+                </li>
+                <li style="margin-bottom: 12px;">
+                    <button class="exemplo-btn" style="background: none; border: 1px solid var(--border-color); color: var(--text-primary); padding: 12px; border-radius: 8px; width: 100%; text-align: left; cursor: pointer; transition: all 0.2s;"
+                            data-pergunta="Qual a distância mínima das tomadas em relação a pontos de água?">
+                        📌 Qual a distância mínima das tomadas em relação a pontos de água?
+                    </button>
+                </li>
+                <li style="margin-bottom: 12px;">
+                    <button class="exemplo-btn" style="background: none; border: 1px solid var(--border-color); color: var(--text-primary); padding: 12px; border-radius: 8px; width: 100%; text-align: left; cursor: pointer; transition: all 0.2s;"
+                            data-pergunta="Qual a espessura mínima de lajes de piso?">
+                        📌 Qual a espessura mínima de lajes de piso?
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script>
+        const API_URL = `${API_URLS.ex6}/consultar`;
+
+        document.querySelectorAll('.exemplo-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.background = 'rgba(255,255,255,0.05)';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.background = 'none';
+            });
+            btn.addEventListener('click', function() {
+                document.getElementById('pergunta').value = this.dataset.pergunta;
+            });
+        });
+
+        document.getElementById('btnConsultar').addEventListener('click', async () => {
+            const pergunta = document.getElementById('pergunta').value;
+            const btn = document.getElementById('btnConsultar');
+            const resultado = document.getElementById('resultado');
+
+            if (!pergunta.trim()) {
+                alert('Por favor, digite uma pergunta.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="loading"></span>Consultando...';
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ pergunta })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    mostrarResultado(data.resposta);
+                } else {
+                    alert('Erro: ' + (data.erro || 'Erro desconhecido'));
+                }
+            } catch (error) {
+                alert('Erro ao conectar com a API: ' + error.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = 'Consultar Normas';
+            }
+        });
+
+        function mostrarResultado(resposta) {
+            const respostaDiv = document.getElementById('resposta');
+            const resultado = document.getElementById('resultado');
+
+            respostaDiv.innerHTML = `<p>${resposta.replace(/\n/g, '<br>')}</p>`;
+            resultado.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

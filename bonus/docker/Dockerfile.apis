@@ -1,0 +1,31 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Instalar dependências do sistema
+RUN apt-get update && apt-get install -y \
+    gcc \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar requirements
+COPY bonus/api/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar código das APIs
+COPY bonus/api/ ./api/
+
+# Copiar código do exercício 6 (RAG)
+COPY exercicio6_rag_normas ./exercicio6_rag_normas/
+
+# Variáveis de ambiente
+ENV PYTHONUNBUFFERED=1
+
+# Expor portas
+EXPOSE 5001 5002 5004 5006
+
+# Script de inicialização
+COPY bonus/docker/start-apis.sh /start-apis.sh
+RUN chmod +x /start-apis.sh
+
+CMD ["/start-apis.sh"]

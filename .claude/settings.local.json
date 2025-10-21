@@ -5,7 +5,8 @@
       "Bash(dir /b)",
       "Bash(mkdir:*)",
       "Bash(del testar_llm.py)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

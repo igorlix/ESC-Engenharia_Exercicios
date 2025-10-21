@@ -1,0 +1,61 @@
+
+services:
+  apis:
+    build:
+      context: ../..
+      dockerfile: bonus/docker/Dockerfile.apis
+    ports:
+      - "5001:5001"
+      - "5002:5002"
+      - "5004:5004"
+      - "5006:5006"
+    environment:
+      - AWS_BEARER_TOKEN_BEDROCK= ABSKQmVkcm9ja0FQSUtleS0zaTI3LWF0LTQ4ODM2OTg2ODE1Mzo3azhsQi9QVTBJNFozWE55MXFCcWdjalhxL1JWNHZwblNQZ1RMQnhOQnkwekxqaUhkaThIRWs0dFZJMD0=
+      - AWS_REGION=us-east-2
+      - AWS_INFERENCE_PROFILE_ID=us.amazon.nova-micro-v1:0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  django:
+    build:
+      context: ../..
+      dockerfile: bonus/docker/Dockerfile.django
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  streamlit:
+    build:
+      context: ../..
+      dockerfile: bonus/docker/Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - apis
+      - django
+      - streamlit
+    restart: unless-stopped
