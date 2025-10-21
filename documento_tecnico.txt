@@ -1,0 +1,23 @@
+RELATÓRIO DE MANUTENÇÃO - SISTEMA DE REFRIGERAÇÃO INDUSTRIAL
+Data: 15/03/2025
+Técnico: João Silva
+
+EQUIPAMENTO: Chiller modelo CR-420, fabricante CoolTech
+
+DESCRIÇÃO DO PROBLEMA: O sistema apresentou queda de eficiência de aproximadamente 30% nos últimos 15 dias. Operadores relataram aumento no ruído de funcionamento e temperatura de saída 5°C acima do parâmetro normal.
+
+DIAGNÓSTICO: Após inspeção, foram identificados os seguintes problemas:
+1. Compressor secundário com desgaste excessivo nas válvulas de sucção
+2. Vazamento de gás refrigerante R-410A no circuito principal (pressão 15% abaixo do nominal)
+3. Condensador com acúmulo de sujeira reduzindo capacidade de troca térmica
+
+AÇÕES REALIZADAS:
+- Substituição das válvulas de sucção do compressor (peças: VS-42B e VS-42C)
+- Reparo no ponto de vazamento localizado na conexão CC-12
+- Recarga de 2,4kg de gás R-410A
+- Limpeza do condensador com produto químico CR-Clean
+
+RECOMENDAÇÕES:
+- Programar substituição completa do compressor secundário em até 60 dias
+- Aumentar frequência de limpeza do condensador para ciclos mensais
+- Instalar sensor de pressão adicional no ponto CC-12 para monitoramento contínuo
