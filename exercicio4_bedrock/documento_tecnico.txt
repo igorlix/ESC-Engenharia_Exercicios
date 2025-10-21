@@ -1,0 +1,88 @@
+RELATÓRIO TÉCNICO DE MANUTENÇÃO - SISTEMA DE REFRIGERAÇÃO INDUSTRIAL
+
+Data: 15/03/2024
+Equipamento: Chiller modelo CFX-5000
+Número de série: CFX-5000-2023-A47
+Local: Sala de máquinas - Bloco B
+
+DESCRIÇÃO DO PROBLEMA:
+
+Durante a inspeção de rotina, foi identificado que o compressor principal apresenta ruído excessivo durante operação, especialmente na faixa de 1200-1800 RPM. A temperatura de descarga está medindo 82°C, valor acima do esperado (75°C nominal).
+
+O sistema de controle PLC reportou 3 alarmes nas últimas 48 horas:
+- Alarme A203: Pressão de condensação elevada (16.5 bar, limite 15 bar)
+- Alarme B107: Temperatura de óleo do compressor alta (68°C)
+- Alarme C042: Vazão de água de resfriamento reduzida
+
+COMPONENTES AFETADOS:
+
+1. Compressor scroll modelo CS-750
+   - Potência nominal: 75 kW
+   - Fluido refrigerante: R-134a
+   - Capacidade: 250 TR
+
+2. Condensador a água
+   - Tipo: casco e tubo
+   - Área de troca: 45 m²
+   - Material: aço inoxidável AISI 316
+
+3. Válvula de expansão eletrônica VEE-40
+   - Abertura atual: 42% (esperado 35-40%)
+
+4. Bomba de água de resfriamento BAR-100
+   - Vazão nominal: 150 m³/h
+   - Vazão medida: 118 m³/h
+
+DIAGNÓSTICO PRELIMINAR:
+
+A vazão reduzida da água de resfriamento (21% abaixo do nominal) está causando elevação na temperatura e pressão de condensação. Possível obstrução parcial no filtro de linha ou incrustação nos tubos do condensador.
+
+O ruído do compressor pode estar relacionado ao esforço adicional devido às condições adversas de operação.
+
+ESPECIFICAÇÕES TÉCNICAS RELEVANTES:
+
+- Pressão de evaporação: 4.2 bar (normal)
+- Pressão de condensação: 16.5 bar (elevada - normal seria 13-14 bar)
+- Superaquecimento: 8°C (dentro da faixa 6-10°C)
+- Subresfriamento: 4°C (baixo - ideal seria 6-8°C)
+- Corrente elétrica do compressor: 142 A (nominal 135 A)
+
+ANÁLISE DE RISCO:
+
+Se não corrigido em até 72 horas, pode ocorrer:
+- Falha prematura do compressor por sobrecarga térmica
+- Redução de eficiência energética em aproximadamente 15-20%
+- Risco de parada não programada do sistema
+
+AÇÕES RECOMENDADAS:
+
+1. IMEDIATO (0-24h):
+   - Reduzir carga térmica para 70% da capacidade
+   - Verificar e limpar filtro de linha da bomba de água
+   - Monitorar temperatura de descarga a cada 2 horas
+
+2. CURTO PRAZO (24-72h):
+   - Realizar limpeza química do condensador (possível incrustação)
+   - Verificar alinhamento e fixação da bomba BAR-100
+   - Análise de óleo do compressor para verificar degradação
+
+3. MÉDIO PRAZO (1-2 semanas):
+   - Substituir válvula de expansão se problema persistir
+   - Calibração dos sensores de temperatura e pressão
+   - Atualização do firmware do PLC para versão 3.2.1
+
+RECURSOS NECESSÁRIOS:
+
+- Técnico especializado em refrigeração (16 horas)
+- Kit de limpeza química para condensador
+- Possivelmente: válvula de expansão VEE-40 (peça de reposição)
+- Análise laboratorial de óleo (externa)
+
+OBSERVAÇÕES ADICIONAIS:
+
+O histórico de manutenção mostra que a última limpeza do condensador foi há 8 meses. O fabricante recomenda intervalos de 6 meses para ambientes industriais.
+
+A qualidade da água de resfriamento deve ser verificada (dureza, pH, condutividade) para prevenir recorrência do problema.
+
+Responsável técnico: Eng. Carlos Silva
+Aprovação necessária: Gerente de Manutenção

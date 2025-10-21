@@ -1,133 +1,78 @@
-# Aplicação de Análise de Dados com Streamlit
+# Aplicação de Análise de Dados Interativa
 
-Aplicação web interativa para análise exploratória de dados, desenvolvida com Streamlit e Pandas.
+Aplicação web para análise exploratória de dados desenvolvida com Streamlit, Pandas e Plotly.
 
 ## Funcionalidades
 
-- Upload de arquivos CSV e Excel
-- Datasets de exemplo integrados (Iris e California Housing)
-- Visualização de dados em formato de tabela
-- Estatísticas descritivas completas (média, mediana, desvio padrão, variância, quartis)
-- Múltiplos tipos de gráficos:
-  - Histograma
-  - Scatter Plot (com opção de colorir por categoria)
-  - Box Plot
-  - Matriz de Correlação
-- Filtragem de dados por valores numéricos e categorias
-- Download dos dados filtrados em CSV
+### 6 Páginas Principais
 
-## Requisitos
+- **Início**: Resumo da aplicação e métricas gerais
+- **Visão Geral**: Visualização dos dados, informações de colunas e download
+- **Estatísticas**: 12 métricas estatísticas por coluna e histograma de distribuição
+- **Gráficos**: 5 tipos de visualizações interativas (Histograma, Dispersão, Box Plot, Correlação, Linha)
+- **Filtros**: Filtragem numérica e categórica com exportação
+- **Ajuda**: Guia de uso e FAQ
 
-Antes de executar a aplicação, instale as dependências necessárias:
+### Recursos
 
-```bash
-pip install streamlit pandas numpy matplotlib seaborn scikit-learn openpyxl
-```
+- Upload de CSV/Excel ou datasets de exemplo (Iris e California Housing)
+- 4 temas de gráficos (Padrão, Seaborn, Plotly, Simples)
+- Gráficos interativos com zoom, pan e download
+- Exportação de dados filtrados
 
-## Como Executar
-
-### Passo 1: Instalar dependências
+## Instalação
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Ou instale manualmente:
-```bash
-pip install streamlit pandas numpy matplotlib seaborn scikit-learn openpyxl
-```
+## Execução
 
-### Passo 2: Executar a aplicação
-
-No PowerShell ou terminal, navegue até a pasta do projeto:
-```bash
-cd exercicio3_app_streamlit
-```
-
-E execute:
-```bash
-python -m streamlit run app.py
-```
-
-Ou se o comando `streamlit` estiver no PATH:
 ```bash
 streamlit run app.py
 ```
 
-### Passo 3: Acessar no navegador
+ou 
 
-A aplicação será aberta automaticamente no navegador em http://localhost:8501
+```bash
+python -m streamlit run app.py
+```
 
-**Observações:**
-- Na primeira execução, o Streamlit pode pedir um email (é opcional, pode deixar em branco)
-- NÃO execute com `python app.py` - isso não funciona para aplicações Streamlit!
-- Se a porta 8501 estiver ocupada, o Streamlit usará outra porta automaticamente
-
-## Como Usar
-
-### Opção 1: Upload de Arquivo
-
-1. Na barra lateral, selecione "Upload de arquivo"
-2. Clique em "Browse files" e selecione um arquivo CSV ou Excel
-3. Os dados serão carregados automaticamente
-
-### Opção 2: Dataset de Exemplo
-
-1. Na barra lateral, selecione "Dataset de exemplo"
-2. Escolha entre "Iris" ou "California Housing"
-3. O dataset será carregado automaticamente
-
-### Explorando os Dados
-
-**Visualização dos Dados**
-- Ajuste o número de linhas a serem exibidas usando o slider
-- Visualize métricas gerais: total de linhas, colunas e valores nulos
-
-**Estatísticas Descritivas**
-- Veja o resumo estatístico completo de todas as colunas numéricas
-- Selecione uma coluna específica para ver estatísticas detalhadas
-
-**Visualizações**
-- Histograma: Visualize a distribuição de uma variável
-- Scatter Plot: Compare duas variáveis numéricas
-- Box Plot: Compare distribuições de múltiplas variáveis
-- Matriz de Correlação: Veja as correlações entre todas as variáveis numéricas
-
-**Filtragem**
-- Filtre dados numéricos usando o slider de intervalo
-- Filtre dados categóricos selecionando as categorias desejadas
-- Baixe os dados filtrados em formato CSV
+A aplicação abrirá automaticamente em http://localhost:8501
 
 ## Estrutura do Projeto
 
 ```
 exercicio3_app_streamlit/
-├── app.py          # Código principal da aplicação
-└── README.md       # Este arquivo
+├── app.py              # Aplicação principal
+├── utils.py            # Funções auxiliares
+├── modulos/            # Módulos das páginas
+│   ├── inicio.py
+│   ├── visao_geral.py
+│   ├── estatisticas.py
+│   ├── graficos.py
+│   ├── filtros.py
+│   └── ajuda.py
+└── requirements.txt
 ```
 
-## Datasets Incluídos
+## Tecnologias
 
-**Iris Dataset**
-- 150 amostras de flores de 3 espécies diferentes
-- 4 features: comprimento e largura das sépalas e pétalas
+- **Streamlit**: Framework web
+- **Pandas**: Manipulação de dados
+- **Plotly**: Visualizações interativas
+- **Scikit-learn**: Datasets de exemplo
+- **NumPy**: Computação numérica
 
-**California Housing Dataset**
-- Dados de preços de imóveis na Califórnia
-- 8 features incluindo localização, idade, número de quartos, etc.
+## Uso Básico
 
-## Exemplos de Uso
-
-1. Carregue o dataset Iris
-2. Visualize a distribuição da largura das pétalas no histograma
-3. Crie um scatter plot comparando comprimento vs largura das pétalas
-4. Colorir os pontos por espécie para identificar padrões
-5. Filtre apenas as flores da espécie "setosa"
-6. Baixe os dados filtrados
+1. **Carregar dados**: Use a sidebar para upload de arquivo ou selecione um dataset de exemplo
+2. **Navegar**: Escolha uma página no menu lateral
+3. **Analisar**: Explore estatísticas, visualizações e aplique filtros
+4. **Exportar**: Faça download dos dados completos ou filtrados
 
 ## Observações
 
-- Para aproveitar todas as funcionalidades, use datasets com colunas numéricas
-- A aplicação detecta automaticamente colunas numéricas e categóricas
-- Arquivos muito grandes podem demorar para carregar
-- Valores nulos são automaticamente removidos dos gráficos
+- Arquivos CSV e Excel suportados
+- Sessão mantida enquanto o navegador estiver aberto
+- Recomendado para datasets com colunas numéricas e categóricas
