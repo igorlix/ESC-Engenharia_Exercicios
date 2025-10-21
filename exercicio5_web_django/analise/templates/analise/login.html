@@ -1,0 +1,55 @@
+{% extends 'analise/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center" style="margin-top: 80px;">
+    <div class="col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom: 16px;">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="card-title mb-2" style="font-weight: 700;">Entrar no Sistema</h3>
+                    <p class="text-secondary mb-0" style="font-size: 0.9rem;">Faça login para acessar a análise de sentimento</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.username.id_for_label }}" class="form-label">Usuário</label>
+                        {{ form.username }}
+                        {% if form.username.errors %}
+                            <div class="text-danger mt-2">{{ form.username.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-4">
+                        <label for="{{ form.password.id_for_label }}" class="form-label">Senha</label>
+                        {{ form.password }}
+                        {% if form.password.errors %}
+                            <div class="text-danger mt-2">{{ form.password.errors }}</div>
+                        {% endif %}
+                    </div>
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger mb-3">{{ form.non_field_errors }}</div>
+                    {% endif %}
+                    <button type="submit" class="btn btn-primary w-100 mb-3" style="padding: 14px;">
+                        <strong>Entrar</strong>
+                    </button>
+                </form>
+                <div class="text-center pt-3" style="border-top: 1px solid var(--border-color);">
+                    <p class="text-secondary mb-0">
+                        Não tem conta? <a href="{% url 'registro' %}" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">Registre-se</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('id_username').classList.add('form-control');
+    document.getElementById('id_password').classList.add('form-control');
+</script>
+{% endblock %}

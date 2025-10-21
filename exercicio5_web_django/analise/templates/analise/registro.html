@@ -1,0 +1,66 @@
+{% extends 'analise/base.html' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center" style="margin-top: 60px;">
+    <div class="col-md-6 col-lg-5">
+        <div class="card">
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom: 16px;">
+                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 class="card-title mb-2" style="font-weight: 700;">Criar Conta</h3>
+                    <p class="text-secondary mb-0" style="font-size: 0.9rem;">Registre-se para começar a usar o sistema</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.username.id_for_label }}" class="form-label">Usuário</label>
+                        {{ form.username }}
+                        {% if form.username.errors %}
+                            <div class="text-danger mt-2">{{ form.username.errors }}</div>
+                        {% endif %}
+                        {% if form.username.help_text %}
+                            <small class="form-text text-secondary d-block mt-1">{{ form.username.help_text }}</small>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.password1.id_for_label }}" class="form-label">Senha</label>
+                        {{ form.password1 }}
+                        {% if form.password1.errors %}
+                            <div class="text-danger mt-2">{{ form.password1.errors }}</div>
+                        {% endif %}
+                        {% if form.password1.help_text %}
+                            <small class="form-text text-secondary d-block mt-1">{{ form.password1.help_text }}</small>
+                        {% endif %}
+                    </div>
+                    <div class="mb-4">
+                        <label for="{{ form.password2.id_for_label }}" class="form-label">Confirmar Senha</label>
+                        {{ form.password2 }}
+                        {% if form.password2.errors %}
+                            <div class="text-danger mt-2">{{ form.password2.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mb-3" style="padding: 14px;">
+                        <strong>Criar Conta</strong>
+                    </button>
+                </form>
+                <div class="text-center pt-3" style="border-top: 1px solid var(--border-color);">
+                    <p class="text-secondary mb-0">
+                        Já tem conta? <a href="{% url 'login' %}" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">Faça login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('id_username').classList.add('form-control');
+    document.getElementById('id_password1').classList.add('form-control');
+    document.getElementById('id_password2').classList.add('form-control');
+</script>
+{% endblock %}
