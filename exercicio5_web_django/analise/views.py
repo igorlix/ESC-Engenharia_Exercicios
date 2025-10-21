@@ -59,7 +59,8 @@ def analise_view(request):
                 usuario=request.user,
                 texto=texto,
                 sentimento=resultado['sentimento'],
-                pontuacao=resultado['pontuacao']
+                pontuacao=resultado['pontuacao'],
+                metodo=resultado.get('metodo', 'dicionario')
             )
 
             resultado['texto'] = texto
@@ -78,3 +79,11 @@ def logout_view(request):
     logout(request)
     messages.success(request, 'Logout realizado com sucesso!')
     return redirect('login')
+
+
+@login_required
+def limpar_historico(request):
+    if request.method == 'POST':
+        Analise.objects.filter(usuario=request.user).delete()
+        messages.success(request, 'Historico limpo com sucesso!')
+    return redirect('analise')

@@ -3,7 +3,9 @@
     "allow": [
       "Bash(python:*)",
       "Bash(dir /b)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(del testar_llm.py)",
+      "Bash(pip install:*)"
     ],
     "deny": [],
     "ask": []

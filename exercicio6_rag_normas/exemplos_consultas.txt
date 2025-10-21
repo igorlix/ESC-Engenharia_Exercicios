@@ -1,0 +1,69 @@
+EXEMPLOS DE CONSULTAS E RESPOSTAS
+ASSISTENTE VIRTUAL - NORMAS TECNICAS
+================================================================================
+
+CONSULTA 1:
+Qual a secao minima de condutores em circuitos de iluminacao residencial?
+
+RESPOSTA 1:
+A seção mínima de condutores em circuitos de iluminação residencial é de 1,5 mm².
+
+Fonte: Documento 2: norma_001_seguranca_eletrica.txt, Seção 3: Requisitos de Instalação, Subseção 3.1 Seção Mínima de Condutores.
+
+--------------------------------------------------------------------------------
+
+CONSULTA 2:
+Qual a resistencia caracteristica minima fck do concreto para pilares?
+
+RESPOSTA 2:
+Nao encontrei essa informacao nas normas disponiveis.
+
+Os documentos fornecidos não contêm informações sobre a resistência característica mínima fck do concreto para pilares. As normas abordam requisitos técnicos para fundações, segurança elétrica e segurança no trabalho, mas não especificam detalhes sobre resistência do concreto para pilares.
+
+--------------------------------------------------------------------------------
+
+CONSULTA 3:
+Quais os equipamentos de protecao individual obrigatorios em canteiros de obras?
+
+RESPOSTA 3:
+Na analise dos documentos fornecidos, não há menção direta a todos os equipamentos de proteção individual obrigatórios em canteiros de obras. No entanto, podemos extrair algumas informações relevantes:
+
+1. **Documento 3: norma_003_seguranca_trabalho.txt**
+   - **Trabalho em Altura**: Para trabalhos acima de 2 metros de altura, é obrigatório o uso de:
+     - Cinto de segurança tipo paraquedista
+     - Trava-quedas
+     - Linha de vida ou ponto de ancoragem certificado (Secao 2.2 Trabalho em Altura)
+
+Fonte: norma_003_seguranca_trabalho.txt
+
+Portanto, a resposta parcial que podemos extrair é que para trabalhos em altura acima de 2 metros, os equipamentos obrigatórios são cinto de segurança tipo paraquedista, trava-quedas e linha de vida ou ponto de ancoragem certificado.
+
+Se precisar de informações sobre outros equipamentos de proteção individual, como óculos de proteção, máscaras, capacetes, etc., não encontramos essas informações nos documentos fornecidos.
+
+**Resposta:**
+Para trabalhos acima de 2 metros de altura, os equipamentos de proteção individual obrigatórios são cinto de segurança tipo paraquedista, trava-quedas e linha de vida ou ponto de ancoragem certificado. (Fonte: norma_003_seguranca_trabalho.txt)
+
+**Nota:** Não encontrei essa informação nas normas disponiveis para outros tipos de trabalho em canteiros de obras.
+
+--------------------------------------------------------------------------------
+
+CONSULTA 4:
+Qual a altura minima para instalacao de tomadas eletricas?
+
+RESPOSTA 4:
+Não encontrei essa informação nas normas disponiveis.
+
+Os documentos fornecidos não especificam a altura mínima para a instalação de tomadas elétricas. As normas abordadas são sobre requisitos para construção civil, segurança elétrica e segurança no trabalho, mas não mencionam especificações detalhadas sobre a altura das tomadas.
+
+--------------------------------------------------------------------------------
+
+CONSULTA 5:
+Qual a distancia minima das tomadas em relacao a pontos de agua?
+
+RESPOSTA 5:
+Não encontrei essa informação nas normas disponiveis.
+
+Os documentos fornecidos não mencionam especificamente a distância mínima das tomadas em relação a pontos de água. As normas abordam requisitos técnicos para fundações, segurança elétrica e segurança no trabalho, mas não se aprofundam em detalhes sobre a distância entre tomadas e pontos de água.
+
+--------------------------------------------------------------------------------
+

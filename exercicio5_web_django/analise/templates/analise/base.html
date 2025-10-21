@@ -218,7 +218,8 @@
                 Análise de Sentimento
             </a>
             {% if user.is_authenticated %}
-            <div class="navbar-nav ms-auto">
+            <div class="d-flex align-items-center ms-auto">
+                <a class="nav-link me-3" href="#" data-bs-toggle="modal" data-bs-target="#sobreModal" style="color: var(--text-secondary); text-decoration: none;">Sobre</a>
                 <span class="navbar-text me-3">
                     Olá, <strong>{{ user.username }}</strong>
                 </span>
@@ -227,6 +228,81 @@
             {% endif %}
         </div>
     </nav>
+
+    <!-- Modal Sobre -->
+    <div class="modal fade" id="sobreModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--border-color);">
+                    <h5 class="modal-title">Sobre o Sistema</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 style="color: var(--accent-color); font-weight: 600;">Análise de Sentimento</h6>
+                    <p style="line-height: 1.6;">
+                        Sistema web desenvolvido para análise automática de sentimento em textos utilizando
+                        técnicas de processamento de linguagem natural (NLP) e inteligência artificial.
+                    </p>
+
+                    <h6 style="color: var(--accent-color); font-weight: 600; margin-top: 20px;">Funcionalidades</h6>
+                    <ul style="line-height: 1.8;">
+                        <li>Análise de sentimento em português e inglês</li>
+                        <li>Classificação: positivo, negativo ou neutro</li>
+                        <li>Pontuação numérica de -1.0 a 1.0</li>
+                        <li>Histórico de análises por usuário</li>
+                        <li>Interface moderna com tema escuro</li>
+                    </ul>
+
+                    <h6 style="color: var(--accent-color); font-weight: 600; margin-top: 20px;">Métodos de Análise</h6>
+                    <p style="line-height: 1.6; font-size: 0.9rem;">
+                        O sistema utiliza uma abordagem de três camadas para garantir precisão:
+                    </p>
+                    <div style="margin-left: 15px; margin-bottom: 15px;">
+                        <div style="margin-bottom: 12px;">
+                            <strong style="color: var(--success-color);">1. Amazon Bedrock (LLM)</strong>
+                            <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                                Método principal utilizando o modelo Amazon Nova Micro via AWS Bedrock para análise contextual
+                                avançada. Proporciona maior precisão ao entender nuances da linguagem.
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <strong style="color: #60a5fa;">2. Dicionário Customizado</strong>
+                            <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                                Fallback com dicionário de 60+ palavras em português e inglês. Analisa presença de
+                                palavras positivas e negativas para calcular o sentimento.
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <strong style="color: #fbbf24;">3. TextBlob</strong>
+                            <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                                Biblioteca de NLP utilizada quando não há palavras-chave identificadas no dicionário.
+                                Fallback final para garantir que todas as análises sejam processadas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h6 style="color: var(--accent-color); font-weight: 600; margin-top: 20px;">Tecnologias</h6>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+                        <span class="badge" style="background: rgba(255,75,75,0.2); color: var(--text-primary);">Django</span>
+                        <span class="badge" style="background: rgba(33,195,84,0.2); color: var(--text-primary);">AWS Bedrock</span>
+                        <span class="badge" style="background: rgba(96,165,250,0.2); color: var(--text-primary);">Amazon Nova</span>
+                        <span class="badge" style="background: rgba(251,191,36,0.2); color: var(--text-primary);">TextBlob</span>
+                        <span class="badge" style="background: rgba(0,104,201,0.2); color: var(--text-primary);">Bootstrap 5</span>
+                        <span class="badge" style="background: rgba(255,165,0,0.2); color: var(--text-primary);">Python</span>
+                    </div>
+
+                    <hr style="border-color: var(--border-color); margin: 20px 0;">
+
+                    <p style="text-align: center; margin: 0;">
+                        <small style="color: var(--text-secondary);">
+                            Desenvolvido para o <strong style="color: var(--accent-color);">Exercício 5</strong><br>
+                            Processo seletivo de estágio - <strong>ESC Engenharia</strong>
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         {% if messages %}

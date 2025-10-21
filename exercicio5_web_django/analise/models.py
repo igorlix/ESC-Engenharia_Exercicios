@@ -13,6 +13,7 @@ class Analise(models.Model):
     texto = models.TextField()
     sentimento = models.CharField(max_length=20, choices=SENTIMENTOS)
     pontuacao = models.FloatField()
+    metodo = models.CharField(max_length=50, default='dicionario')
     data_criacao = models.DateTimeField(auto_now_add=True)
 
     class Meta:

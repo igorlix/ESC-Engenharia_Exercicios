@@ -1,0 +1,68 @@
+NORMA TECNICA 002 - REQUISITOS PARA CONSTRUCAO CIVIL
+
+Secao 1: Objetivo
+Estabelecer os requisitos tecnicos minimos para projetos e execucao de obras de construcao civil em edificacoes.
+
+Secao 2: Fundacoes
+2.1 Investigacao do Solo
+Toda obra deve realizar sondagem do solo antes do inicio da construcao. O numero minimo de sondagens é de 1 furo a cada 200m² de area construida.
+
+2.2 Profundidade Minima
+A profundidade minima das fundacoes deve ser de 1,5 metros, podendo variar conforme o tipo de solo e carga da edificacao.
+
+2.3 Concreto para Fundacoes
+O concreto utilizado em fundacoes deve ter resistencia caracteristica minima (fck) de 20 MPa.
+
+Secao 3: Estruturas de Concreto
+3.1 Resistencia do Concreto
+- Elementos estruturais: fck minimo de 25 MPa
+- Lajes: fck minimo de 20 MPa
+- Pilares: fck minimo de 30 MPa
+
+3.2 Cobrimento de Armaduras
+O cobrimento nominal minimo da armadura em relacao a face externa do concreto deve ser:
+- Lajes: 2,5 cm
+- Vigas e pilares em ambientes internos: 3,0 cm
+- Vigas e pilares em ambientes externos: 4,0 cm
+- Elementos em contato com solo: 5,0 cm
+
+3.3 Espessura Minima de Lajes
+As lajes macicas devem ter espessura minima de:
+- Lajes de forro: 7 cm
+- Lajes de piso: 10 cm
+- Lajes em balanco: 10 cm
+
+Secao 4: Alvenaria
+4.1 Espessura de Paredes
+- Paredes externas: espessura minima de 15 cm
+- Paredes internas: espessura minima de 10 cm
+- Paredes de divisa entre unidades: espessura minima de 15 cm para isolamento acustico
+
+4.2 Vergas e Contravergas
+Todas as aberturas (portas e janelas) devem possuir vergas e contravergas com comprimento minimo de 30 cm alem de cada lado da abertura.
+
+Secao 5: Impermeabilizacao
+5.1 Areas Molhadas
+Banheiros, cozinhas e areas de servico devem receber impermeabilizacao adequada nas paredes ate altura minima de 1,5 metros.
+
+5.2 Lajes de Cobertura
+Todas as lajes expostas a intemperies devem receber sistema de impermeabilizacao apropriado com teste de estanqueidade por periodo minimo de 72 horas.
+
+Secao 6: Instalacoes Hidraulicas
+6.1 Reservatorios de Agua
+O volume minimo de reservacao de agua deve ser calculado considerando 150 litros por pessoa por dia, com autonomia minima de 24 horas.
+
+6.2 Tubulacoes
+As tubulacoes de agua fria devem seguir as seguintes especificacoes minimas:
+- Alimentacao principal: diametro minimo de 25 mm
+- Ramais de distribuicao: diametro minimo de 20 mm
+- Sub-ramais: diametro conforme o numero de pontos atendidos
+
+Secao 7: Acessibilidade
+7.1 Rampas
+Quando houver desnivel, rampas devem ser previstas com inclinacao maxima de 8,33% (1:12).
+
+7.2 Portas
+A largura minima livre de portas deve ser de 80 cm para permitir acesso de cadeira de rodas.
+
+As disposicoes desta norma devem ser observadas em conjunto com a legislacao municipal aplicavel.
