@@ -25,19 +25,19 @@ Não conhecia o streamlit e gostei bastante. Demorei um pouco mais do que devia 
 Caso tenha interesse este é o link do deploy pelo próprio streamlit: [exercicio3-app-streamlit](https://igorlix-esc-engenharia-exerc-exercicio3-app-streamlitapp-wktjjr.streamlit.app/)
 
 
-### [Exercício 4:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio4_bedrock/README)
+### [Exercício 4:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio4_bedrock/README.md)
 
 Para o LLM, utilizei o AWS Bedrock com Amazon Nova Micro. Os detalhes estão especificados no README do exercício. Testei e obtive resposta, mas a recente instabilidade da AWS pode impactar o funcionamento. 
 
 
-### [Exercício 5:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio5_web_django/README)
+### [Exercício 5:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio5_web_django/README.md)
 
 ![Tela Inicial:](exercicio5_web_django/projeto/tela.jpg)
 Me diverti bastante aqui, a análise com LLM foi tranquila de se executar. Gastei a maior parte do tempo com o visual da página. 
 
 
 
-### [Exercício 6:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio6_rag_normas/README)
+### [Exercício 6:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio6_rag_normas/README.md)
 
 Por fim, nesse exercício o assistente virtual recebe os dados da pasta "documentos" nos formatos "txt" e "pdf", optei por utilizar as normas do INMETRO. Também inclui as consultas de teste.
 
