@@ -1,5 +1,7 @@
 # Análise de Sentimento Web
 
+![Tela Inicial:](projeto/tela.png)
+
 Para aplicação web, como especificado, utilizei:
 
 - Django
