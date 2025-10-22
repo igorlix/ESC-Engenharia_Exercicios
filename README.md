@@ -37,4 +37,5 @@ Para o LLM, utilizei o AWS Bedrock com Amazon Nova Micro. Os detalhes estão esp
 
 
 
+
 ### [Exercício 6:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio6_rag_normas)

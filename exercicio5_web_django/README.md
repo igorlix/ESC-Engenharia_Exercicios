@@ -1,5 +1,7 @@
 # Análise de Sentimento Web
 
+![Login:](projeto/login.jpg)
+![Registro:](projeto/registro.jpg)
 ![Tela Inicial:](projeto/tela.jpg)
 
 Para aplicação web, como especificado, utilizei:
