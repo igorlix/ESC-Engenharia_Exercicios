@@ -9,7 +9,7 @@ A seguir estão os links para cada exercício juntamente com uma descrição par
 Fiz um método simples utilizando regex (expressão regular), a ideia é buscar os valores de domínio (+@[a-zA-Z0-9.-]...) e retorná-los posteriormente.
 
 
-### [Exercício 2:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio2_classificador_spam)
+### [Exercício 2:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio2_classificador_spam/classificador_spam.ipynb)
 
 Desenvolvi um modelo classificador de spam com as etapas específicadas, as explicações estão no próprio notebook. 
 
