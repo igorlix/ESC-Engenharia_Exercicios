@@ -1,5 +1,5 @@
 # ESC Engenharia - Exercícios 
-Este repositório contém as soluções que desenvolvi para os exercícios 1-6 do programa de estágio na ESC Engenharia. Os códigos e suas respectivas documentações estão separados em pastas
+Este repositório contém as soluções que desenvolvi para os exercícios 1-6 do programa de estágio na ESC Engenharia. Os códigos e suas respectivas documentações estão organizados em pastas.
 
 ## Links:
 A seguir estão os links para cada exercício juntamente com uma descrição para cada solução.
@@ -25,7 +25,12 @@ Caso tenha interesse este é o link do deploy pelo próprio streamlit: [exercici
 
 ### [Exercício 4:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio4_bedrock)
 
+Para o LLM, utilizei o AWS Bedrock com Amazon Nova Micro. Os detalhes estão especificados no README do exercício. Testei e estava funcional, mas a recente instabilidade da AWS talvez impacte o funcionamento. 
+
+
 ### [Exercício 5:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio5_web_django)
+
+
 
 
 ### [Exercício 6:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio6_rag_normas)

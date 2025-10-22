@@ -1,13 +1,8 @@
 # Extrator de Informacoes de Documentos Tecnicos
 
-Aplicacao para extracao e estruturacao automatica de informacoes de documentos tecnicos utilizando AWS Bedrock com Amazon Nova Micro via perfil de inferencia.
+Para a extração e estruturacao das informacoes do documentos utilizei o AWS Bedrock com Amazon Nova Micro. Para acessá-lo criei uma conta gratuita, sem dados bancários válidos, e gerei um token para a API. 
 
-## Requisitos
-
-- Python 3.8 ou superior
-- Conta AWS com acesso ao Amazon Bedrock
-- Token Bearer do Bedrock
-- Perfil de inferencia configurado no Bedrock
+Por essa chave se tratar de um dado sensível (recebi alguns emails da AWS assim que deixei o repositório públco), configurei apenas as permissões necessárias para a chave e limitei a quantidade de consultas para não ultrapassar os créditos da versão gratuita. Se surgir algum problema com o acesso, por favor me contate. 
 
 ## Instalacao
 
@@ -17,40 +12,24 @@ pip install -r requirements.txt
 
 ## Configuracao
 
-1. Copie o arquivo `.env.example` para `.env`:
-```bash
-cp .env.example .env
-```
+Os dados da API estão no arquivo .env
 
-2. Edite o arquivo `.env` e adicione suas configuracoes AWS:
 ```
-AWS_BEARER_TOKEN_BEDROCK=seu_token_bearer
-AWS_REGION=us-east-1
+AWS_BEARER_TOKEN_BEDROCK=egfsgsegsgegsgeehhser
+AWS_REGION=us-east-2
 AWS_INFERENCE_PROFILE_ID=us.amazon.nova-micro-v1:0
 ```
 
-## Execucao
+## Execução
+
+Execute pelo terminal (cmd ou power shell)
 
 ```bash
 python main.py
 ```
 
-O programa solicitara o caminho do arquivo de entrada. Pressione Enter para usar o arquivo de exemplo `documento_tecnico.txt`.
+O programa solicita o caminho do arquivo de entrada. Pressione Enter para usar o arquivo de exemplo `documento_tecnico.txt`.
 
-## Estrutura do Projeto
-
-```
-exercicio4_bedrock/
-├── main.py                      # Arquivo principal de execucao
-├── src/
-│   ├── config.py                # Configuracao da API
-│   ├── leitor_documentos.py     # Leitura de arquivos
-│   ├── extrator.py              # Extracao de informacoes
-│   └── relatorio.py             # Geracao de relatorios
-├── documento_tecnico.txt        # Arquivo de teste
-├── requirements.txt             # Dependencias
-└── README.md
-```
 
 ## Funcionalidades
 
@@ -67,7 +46,7 @@ A aplicacao gera:
 1. Arquivo JSON (`resultado_extracao_YYYYMMDD_HHMMSS.json`) com dados estruturados
 2. Relatorio resumido no console
 
-## Esquema JSON
+## JSON
 
 ```json
 {
@@ -119,7 +98,3 @@ A aplicacao gera:
   ]
 }
 ```
-
-## Tratamento de Ambiguidades
-
-A aplicacao identifica automaticamente informacoes ambiguas ou incompletas atraves de analise de contexto, verificacao de coerencia e extracao de sugestoes de esclarecimento.

@@ -8,7 +8,7 @@ load_dotenv()
 class Config:
     def __init__(self):
         self.token = os.getenv('AWS_BEARER_TOKEN_BEDROCK')
-        self.regiao = os.getenv('AWS_REGION', 'us-east-1')
+        self.regiao = os.getenv('AWS_REGION', 'us-east-2')
         self.perfil_inferencia = os.getenv('AWS_INFERENCE_PROFILE_ID')
 
         if not self.token:
