@@ -18,7 +18,7 @@ No geral, a solução não é muito complexa, principalmente por utilizar um dat
 
 ### [Exercício 3:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio3_app_streamlit)
 
-![App](exercicio3_app_streamlit\modulos\app.png)
+![App](exercicio3_app_streamlit/modulos/app.png)
 
 Não conhecia o streamlit e gostei bastante. Demorei um pouco mais do que devia nessa etapa, mas fiquei satisfeito com o resultado, achei a solução funcional e bonita visualmente. 
 
