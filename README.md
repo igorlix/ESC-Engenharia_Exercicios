@@ -24,6 +24,7 @@ Não conhecia o streamlit e gostei bastante. Demorei um pouco mais do que devia 
 
 Caso tenha interesse este é o link do deploy pelo próprio streamlit: [exercicio3-app-streamlit](https://igorlix-esc-engenharia-exerc-exercicio3-app-streamlitapp-wktjjr.streamlit.app/)
 
+### Para os próximos exercícios configure a chave de api, as instruções estão nos README's.
 
 ### [Exercício 4:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio4_bedrock/README.md)
 
