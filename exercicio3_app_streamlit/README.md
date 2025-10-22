@@ -6,6 +6,8 @@ Optei por não usar um arquivo único, pois ele estava muito extenso. "app.py" s
 
 Não conhecia o streamlit e tirei muita coisa da ([documentação](https://docs.streamlit.io/)) e [galeria](https://streamlit.io/gallery), especialmente a parte de mostrar código fonte para os gráficos.
 
+A filtragem funciona para um "range" de valores de cada coluna, mas eu deveria ter adicionado um filtro de nulos (pensei nisso depois). O usuário pela própria plataforma deveria identificar quais tipos de nulos estão presentes no dataset (NaN, 0, null, etc.) e filtrá-los.
+
 ## Instalação
 
 ```bash
