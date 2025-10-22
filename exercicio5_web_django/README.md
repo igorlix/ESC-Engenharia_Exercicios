@@ -1,6 +1,6 @@
 # Análise de Sentimento Web
 
-![Tela Inicial:](projeto/tela.png)
+![Tela Inicial:](projeto/tela.jpg)
 
 Para aplicação web, como especificado, utilizei:
 

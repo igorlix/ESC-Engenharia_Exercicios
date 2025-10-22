@@ -32,7 +32,7 @@ Para o LLM, utilizei o AWS Bedrock com Amazon Nova Micro. Os detalhes estão esp
 
 ### [Exercício 5:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio5_web_django)
 
-![Tela Inicial:](exercicio5_web_django/projeto/tela.png)
+![Tela Inicial:](exercicio5_web_django/projeto/tela.jpg)
 
 
 
