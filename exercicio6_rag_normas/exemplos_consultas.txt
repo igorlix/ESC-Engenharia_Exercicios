@@ -1,69 +1,119 @@
 EXEMPLOS DE CONSULTAS E RESPOSTAS
 ASSISTENTE VIRTUAL - NORMAS TECNICAS
-================================================================================
+________________________________________________________________________________
 
 CONSULTA 1:
-Qual a secao minima de condutores em circuitos de iluminacao residencial?
+Qual a definição de brinquedo segundo o Inmetro?
 
 RESPOSTA 1:
-A seção mínima de condutores em circuitos de iluminação residencial é de 1,5 mm².
+A definição de brinquedo segundo o Inmetro é a seguinte:
 
-Fonte: Documento 2: norma_001_seguranca_eletrica.txt, Seção 3: Requisitos de Instalação, Subseção 3.1 Seção Mínima de Condutores.
+"Qualquer produto projetado ou claramente destinado para o uso em brincadeiras por crianças menores de 14 (quatorze) anos de idade."
+
+Fonte: Documento 3: RTAC002801.pdf, Seção 4.3 Brinquedo
 
 --------------------------------------------------------------------------------
 
 CONSULTA 2:
-Qual a resistencia caracteristica minima fck do concreto para pilares?
+Quais são os requisitos de segurança para brinquedos com baterias?
 
 RESPOSTA 2:
-Nao encontrei essa informacao nas normas disponiveis.
+De acordo com o documento "RTAC002801.pdf", os requisitos de segurança para brinquedos com baterias incluem:
 
-Os documentos fornecidos não contêm informações sobre a resistência característica mínima fck do concreto para pilares. As normas abordam requisitos técnicos para fundações, segurança elétrica e segurança no trabalho, mas não especificam detalhes sobre resistência do concreto para pilares.
+1. As baterias para brinquedos destinados para crianças menores de 36 meses não podem ser acessíveis sem a ajuda de pelo menos uma ferramenta (5.8.26).
+2. As pilhas recarregáveis dentro dos brinquedos não podem escapar estando o brinquedo em qualquer posição (5.8.27).
+3. Os brinquedos alimentados por baterias conectadas em paralelo só são permitidos se, pela construção ou pelo projeto do circuito, for notável que o uso concomitante de baterias novas e usadas ou inserção reversa de baterias não prejudique sua conformidade (5.8.28).
+4. As baterias não podem ser carregadas quando estiverem dentro do brinquedo, exceto em determinadas condições (5.8.31 e 5.8.31.1).
+5. Os brinquedos a bateria devem ser identificados com a tensão nominal e a polaridade da pilha ou da bateria, dentro ou fora do compartimento das pilhas ou baterias, e desenho da bateria (5.8.55 e 5.8.56).
+
+Fonte: Documento "RTAC002801.pdf"
 
 --------------------------------------------------------------------------------
 
 CONSULTA 3:
-Quais os equipamentos de protecao individual obrigatorios em canteiros de obras?
+Qual a corrente máxima permitida para plugues de uso doméstico?
 
 RESPOSTA 3:
-Na analise dos documentos fornecidos, não há menção direta a todos os equipamentos de proteção individual obrigatórios em canteiros de obras. No entanto, podemos extrair algumas informações relevantes:
+A corrente máxima permitida para plugues de uso doméstico é de 20 A, conforme estabelecido no Regulamento Consolidado para Plugues e Tomadas, aprovado pela Portaria Inmetro nº 90/2022. 
 
-1. **Documento 3: norma_003_seguranca_trabalho.txt**
-   - **Trabalho em Altura**: Para trabalhos acima de 2 metros de altura, é obrigatório o uso de:
-     - Cinto de segurança tipo paraquedista
-     - Trava-quedas
-     - Linha de vida ou ponto de ancoragem certificado (Secao 2.2 Trabalho em Altura)
-
-Fonte: norma_003_seguranca_trabalho.txt
-
-Portanto, a resposta parcial que podemos extrair é que para trabalhos em altura acima de 2 metros, os equipamentos obrigatórios são cinto de segurança tipo paraquedista, trava-quedas e linha de vida ou ponto de ancoragem certificado.
-
-Se precisar de informações sobre outros equipamentos de proteção individual, como óculos de proteção, máscaras, capacetes, etc., não encontramos essas informações nos documentos fornecidos.
-
-**Resposta:**
-Para trabalhos acima de 2 metros de altura, os equipamentos de proteção individual obrigatórios são cinto de segurança tipo paraquedista, trava-quedas e linha de vida ou ponto de ancoragem certificado. (Fonte: norma_003_seguranca_trabalho.txt)
-
-**Nota:** Não encontrei essa informação nas normas disponiveis para outros tipos de trabalho em canteiros de obras.
+Fonte: Documento 4: RTAC002934.pdf, Art. 3º.
 
 --------------------------------------------------------------------------------
 
 CONSULTA 4:
-Qual a altura minima para instalacao de tomadas eletricas?
+Quais são os requisitos de segurança para adaptadores de tomada?
 
 RESPOSTA 4:
-Não encontrei essa informação nas normas disponiveis.
+Não encontrei essa informação nas normas disponiveis. 
 
-Os documentos fornecidos não especificam a altura mínima para a instalação de tomadas elétricas. As normas abordadas são sobre requisitos para construção civil, segurança elétrica e segurança no trabalho, mas não mencionam especificações detalhadas sobre a altura das tomadas.
+Fonte: Documento 1: RTAC002934.pdf e demais documentos disponíveis.
 
 --------------------------------------------------------------------------------
 
 CONSULTA 5:
-Qual a distancia minima das tomadas em relacao a pontos de agua?
+Como deve ser feita a rotulagem de brinquedos segundo o RTQ?
 
 RESPOSTA 5:
-Não encontrei essa informação nas normas disponiveis.
+De acordo com o documento "RTQ Regulamento Técnico da Qualidade para Brinquedos" (Documento 5), a rotulagem dos brinquedos deve incluir várias informações importantes:
 
-Os documentos fornecidos não mencionam especificamente a distância mínima das tomadas em relação a pontos de água. As normas abordam requisitos técnicos para fundações, segurança elétrica e segurança no trabalho, mas não se aprofundam em detalhes sobre a distância entre tomadas e pontos de água.
+1. **Identificação do fornecedor**: A identificação do fornecedor deve conter a razão social ou, quando houver, nome fantasia e/ou marca registrada e endereço (Documento 2, item 5.9.1.16).
+
+2. **Frases de advertência e símbolos**: Brinquedos destinados às crianças de 37 a 72 meses devem conter frases de advertência/atenção e símbolos para rotulagem conforme definido na Tabela 3 deste RTQ (Documento 4, item 5.9.1.5).
+
+3. **Data de fabricação e validade**: Brinquedos perecíveis devem conter, além da data de fabricação, a data de validade em sua embalagem principal (Documento 4, item 5.9.1.4.1).
+
+4. **Riscos e como evitá-los**: As etiquetas, embalagens e instruções dos brinquedos devem alertar de forma clara aos usuários e/ou seus responsáveis sobre os riscos decorrentes do uso dos brinquedos e a forma de como evitá-los (Documento 7, item 5.9.1.6).
+
+5. **Linguagem oficial do país**: As marcações, instruções de uso e regras de segurança devem ser apresentadas na língua oficial do País (Documento 2, item 5.9.1.14).
+
+6. **Selo de Identificação da Conformidade**: Brinquedos vendidos a granel ou sem embalagem individual devem ostentar o Selo de Identificação da Conformidade no produto ou anexado ao produto (Documento 12, item 1.2).
+
+Cite a fonte: "RTQ Regulamento Técnico da Qualidade para Brinquedos" (Documento 5).
+
+--------------------------------------------------------------------------------
+
+CONSULTA 6:
+Quais são os limites de substâncias químicas permitidas em brinquedos?
+
+RESPOSTA 6:
+De acordo com o documento "RTAQ002801.pdf", os limites de substâncias químicas permitidas em brinquedos são definidos na Tabela 1 deste RTQ. Aqui estão os limites máximos de migração de elementos em mg/kg de materiais de brinquedos:
+
+**Tabela 1 - Limites de migração máxima aceitável de elementos em mg/kg de materiais de brinquedos**
+
+| Elemento Químico | Qualquer material de brinquedo, exceto massa para modelar e tinta para pintar com os dedos | Massa de modelar e tinta para pintar com os dedos |
+|------------------|----------------------------------------------------------------------------------|--------------------------------------------------|
+| Sb (Antimônio)   | 60                                                                              | 60                                              |
+| As (Arsênio)     | 25                                                                              | 25                                              |
+| Ba (Bário)       | 1000                                                                            | 250                                             |
+| Cd (Cádmio)      | 75                                                                              | 50                                              |
+| Cr (Cromo)       | 60                                                                              | 25                                              |
+| Pb (Chumbo)      | 90                                                                              | 90                                              |
+| Hg (Mercúrio)    | 60                                                                              | 25                                              |
+| Se (Selênio)     | 500                                                                             | 500                                             |
+
+Fonte: Documento "RTAQ002801.pdf", Seção 5.5.4.
+
+--------------------------------------------------------------------------------
+
+CONSULTA 7:
+Qual o padrão brasileiro para plugues e tomadas residenciais?
+
+RESPOSTA 7:
+O padrão brasileiro para plugues e tomadas residenciais é a ABNT NBR 14136:2012 Versão Corrigida 5:2021. Esta norma estabelece os requisitos gerais para plugues e tomadas para uso doméstico e análogo até 20 A/250 V em corrente alternada. 
+
+Fonte: Documento 2: RTAC002934.pdf, Seção não identificada.
+
+--------------------------------------------------------------------------------
+
+CONSULTA 8:
+Quais testes mecânicos são obrigatórios para brinquedos?
+
+RESPOSTA 8:
+De acordo com o documento "RTAC002801.pdf", os testes mecânicos obrigatórios para brinquedos incluem:
+
+a) Propriedades gerais, físicas e mecânicas (Norma ABNT NBR NM 300-1).
+
+Fonte: Documento 2, Seção não identificada, Tabela 1 – Ensaios e itens de inspeção visual para brinquedos.
 
 --------------------------------------------------------------------------------
 

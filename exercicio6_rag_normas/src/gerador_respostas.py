@@ -1,7 +1,7 @@
 import boto3
 import json
 from typing import List
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 
 class GeradorRespostas:
@@ -20,16 +20,21 @@ class GeradorRespostas:
 
         contexto = self._construir_contexto(documentos_relevantes)
 
-        prompt = f"""Analise os documentos abaixo e responda a pergunta.
+        prompt = f"""Voce e um assistente especializado em regulamentos tecnicos do INMETRO.
 
-DOCUMENTOS:
+INSTRUCOES:
+1. Analise CUIDADOSAMENTE os documentos fornecidos
+2. Responda APENAS com informacoes encontradas nos documentos
+3. SEMPRE cite a fonte (nome do arquivo) ao responder
+4. Se a informacao NAO estiver nos documentos, responda: "Nao encontrei essa informacao nas normas disponiveis."
+5. Seja preciso e direto na resposta
+
+DOCUMENTOS DISPONIVEIS:
 {contexto}
 
 PERGUNTA: {pergunta}
 
-Extraia a resposta dos documentos acima. Sempre cite a fonte. Se nao encontrar a informacao, responda: "Nao encontrei essa informacao nas normas disponiveis."
-
-RESPOSTA:"""
+RESPOSTA (inclua citacao da fonte):"""
 
         try:
             corpo_requisicao = {

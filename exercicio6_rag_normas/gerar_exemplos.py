@@ -10,17 +10,20 @@ def gerar_exemplos():
     assistente.carregar_indice()
 
     perguntas = [
-        "Qual a secao minima de condutores em circuitos de iluminacao residencial?",
-        "Qual a resistencia caracteristica minima fck do concreto para pilares?",
-        "Quais os equipamentos de protecao individual obrigatorios em canteiros de obras?",
-        "Qual a altura minima para instalacao de tomadas eletricas?",
-        "Qual a distancia minima das tomadas em relacao a pontos de agua?",
+        "Qual a definição de brinquedo segundo o Inmetro?",
+        "Quais são os requisitos de segurança para brinquedos com baterias?",
+        "Qual a corrente máxima permitida para plugues de uso doméstico?",
+        "Quais são os requisitos de segurança para adaptadores de tomada?",
+        "Como deve ser feita a rotulagem de brinquedos segundo o RTQ?",
+        "Quais são os limites de substâncias químicas permitidas em brinquedos?",
+        "Qual o padrão brasileiro para plugues e tomadas residenciais?",
+        "Quais testes mecânicos são obrigatórios para brinquedos?",
     ]
 
     with open('exemplos_consultas.txt', 'w', encoding='utf-8') as f:
         f.write("EXEMPLOS DE CONSULTAS E RESPOSTAS\n")
         f.write("ASSISTENTE VIRTUAL - NORMAS TECNICAS\n")
-        f.write("=" * 80 + "\n\n")
+        f.write("_" * 80 + "\n\n")
 
         for i, pergunta in enumerate(perguntas, 1):
             print(f"\nProcessando pergunta {i}/{len(perguntas)}...")

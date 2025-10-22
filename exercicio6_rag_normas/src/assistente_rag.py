@@ -1,8 +1,8 @@
 from typing import List
-from langchain.schema import Document
+from langchain_core.documents import Document
 from .configuracao import Configuracao
 from .carregador_documentos import CarregadorDocumentos
-from .modelo_embeddings import ModeloEmbeddingsAWS, ModeloEmbeddingsTFIDF
+from .modelo_embeddings import ModeloEmbeddingsCohereV4, ModeloEmbeddingsAWS, ModeloEmbeddingsTFIDF
 from .banco_vetorial import BancoVetorial
 from .gerador_respostas import GeradorRespostas
 
@@ -12,8 +12,24 @@ class AssistenteRAG:
         self.config = config
 
         print("Inicializando modelo de embeddings...")
-        self.modelo_embeddings = ModeloEmbeddingsTFIDF()
-        print("Modelo TF-IDF carregado com sucesso")
+
+        # Verifica se AWS Embeddings esta configurado
+        if config.perfil_inferencia_embeddings:
+            try:
+                self.modelo_embeddings = ModeloEmbeddingsCohereV4(
+                    config.token_aws,
+                    config.regiao_aws,
+                    config.perfil_inferencia_embeddings
+                )
+                print(f"Modelo AWS Embeddings carregado: {config.perfil_inferencia_embeddings}")
+            except Exception as e:
+                print(f"[AVISO] Erro ao carregar AWS Embeddings: {str(e)[:80]}")
+                print("Usando TF-IDF como fallback...")
+                self.modelo_embeddings = ModeloEmbeddingsTFIDF()
+                print("Modelo TF-IDF carregado")
+        else:
+            self.modelo_embeddings = ModeloEmbeddingsTFIDF()
+            print("Modelo TF-IDF carregado (sem AWS configurado)")
 
         self.banco_vetorial = BancoVetorial(
             config.pasta_banco_vetorial,

@@ -1,11 +1,12 @@
 import os
 from typing import List
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
+from langchain_text_splitters.character import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
+from pypdf import PdfReader
 
 
 class CarregadorDocumentos:
-    def __init__(self, pasta_documentos: str, tamanho_chunk: int = 500, sobreposicao: int = 50):
+    def __init__(self, pasta_documentos: str, tamanho_chunk: int = 1000, sobreposicao: int = 100):
         self.pasta_documentos = pasta_documentos
         self.divisor_texto = RecursiveCharacterTextSplitter(
             chunk_size=tamanho_chunk,
@@ -29,6 +30,7 @@ class CarregadorDocumentos:
             caminho_completo = os.path.join(self.pasta_documentos, arquivo)
 
             if arquivo.endswith('.txt'):
+                print(f"Carregando arquivo TXT: {arquivo}")
                 with open(caminho_completo, 'r', encoding='utf-8') as f:
                     conteudo = f.read()
 
@@ -37,7 +39,33 @@ class CarregadorDocumentos:
                     metadata={"fonte": arquivo, "tipo": "texto"}
                 ))
 
-        print(f"Total de documentos carregados: {len(documentos)}")
+            elif arquivo.endswith('.pdf'):
+                print(f"Carregando arquivo PDF: {arquivo}")
+                try:
+                    reader = PdfReader(caminho_completo)
+                    texto_completo = ""
+
+                    for i, pagina in enumerate(reader.pages):
+                        texto_pagina = pagina.extract_text()
+                        if texto_pagina:
+                            texto_completo += f"\n--- Página {i+1} ---\n{texto_pagina}"
+
+                    if texto_completo.strip():
+                        documentos.append(Document(
+                            page_content=texto_completo,
+                            metadata={
+                                "fonte": arquivo,
+                                "tipo": "pdf",
+                                "num_paginas": len(reader.pages)
+                            }
+                        ))
+                        print(f"  [OK] Extraidas {len(reader.pages)} paginas")
+                    else:
+                        print(f"  [AVISO] PDF sem texto extraivel")
+                except Exception as e:
+                    print(f"  [ERRO] Erro ao processar PDF {arquivo}: {e}")
+
+        print(f"\nTotal de documentos carregados: {len(documentos)}")
         return documentos
 
     def dividir_documentos(self, documentos: List[Document]) -> List[Document]:

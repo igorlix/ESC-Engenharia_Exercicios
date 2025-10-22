@@ -39,3 +39,8 @@ Me diverti bastante aqui, a análise com LLM foi tranquila de se executar. Gaste
 
 ### [Exercício 6:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio6_rag_normas)
 
+O assistente virtual recebe os dados da pasta "documentos" nos formatos "txt" e "pdf", optei por utilizar as normas do INMETRO. Também inclui as consultas de teste.
+
+Tentei criar uma interface para o assistente, mas não terminei a tempo. Ainda assim, é completamente funcional pelo terminal. 
+
+
