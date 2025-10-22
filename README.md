@@ -27,7 +27,7 @@ Caso tenha interesse este é o link do deploy pelo próprio streamlit: [exercici
 
 ### [Exercício 4:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio4_bedrock)
 
-Para o LLM, utilizei o AWS Bedrock com Amazon Nova Micro. Os detalhes estão especificados no README do exercício. Testei e estava funcional, mas a recente instabilidade da AWS talvez impacte o funcionamento. 
+Para o LLM, utilizei o AWS Bedrock com Amazon Nova Micro. Os detalhes estão especificados no README do exercício. Testei e está funcional, mas a recente instabilidade da AWS pode impactar o funcionamento. 
 
 
 ### [Exercício 5:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio5_web_django)
