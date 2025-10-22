@@ -41,6 +41,8 @@ Me diverti bastante aqui, a análise com LLM foi tranquila de se executar. Gaste
 
 Por fim, nesse exercício o assistente virtual recebe os dados da pasta "documentos" nos formatos "txt" e "pdf", optei por utilizar as normas do INMETRO. Também inclui as consultas de teste.
 
+Para a busca faço o embedding dos textos com o e utilizo o Amazon Nova Micro como LLM
+
 Tentei criar uma interface para o assistente, mas não terminei a tempo. Ainda assim, é completamente funcional pelo terminal. 
 
 
