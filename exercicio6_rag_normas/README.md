@@ -3,7 +3,7 @@
 Este sistema de consulta de regulamentos técnicos utiliza RAG (Retrieval Augmented Generation) com AWS Bedrock e outras ferramentas, tais como:
 
 - **LangChain**: Framework para aplicações LLM
-- **ChromaDB**: Banco de dados vetorial para busca semântica
+- **ChromaDB**: Banco de dados vetorial para busca cosseno
 - **Cohere Embed v4**: Modelo de embeddings (1536 dimensões)
 - **Amazon Nova Micro**: Modelo de linguagem para geração de respostas
 - **PyPDF**: Extração de texto de documentos PDF

@@ -1,0 +1,201 @@
+{
+  "componentes": [
+    {
+      "nome": "Compressor scroll",
+      "modelo": "CS-750",
+      "especificacoes": [
+        {
+          "parametro": "Potência nominal",
+          "valor": "75 kW"
+        },
+        {
+          "parametro": "Fluido refrigerante",
+          "valor": "R-134a"
+        },
+        {
+          "parametro": "Capacidade",
+          "valor": "250 TR"
+        }
+      ],
+      "estado": "Ruído excessivo"
+    },
+    {
+      "nome": "Condensador a água",
+      "modelo": "casco e tubo",
+      "especificacoes": [
+        {
+          "parametro": "Área de troca",
+          "valor": "45 m²"
+        },
+        {
+          "parametro": "Material",
+          "valor": "aço inoxidável AISI 316"
+        }
+      ],
+      "estado": "desconhecido"
+    },
+    {
+      "nome": "Válvula de expansão eletrônica",
+      "modelo": "VEE-40",
+      "especificacoes": [
+        {
+          "parametro": "Abertura atual",
+          "valor": "42%"
+        }
+      ],
+      "estado": "desconhecido"
+    },
+    {
+      "nome": "Bomba de água de resfriamento",
+      "modelo": "BAR-100",
+      "especificacoes": [
+        {
+          "parametro": "Vazão nominal",
+          "valor": "150 m³/h"
+        },
+        {
+          "parametro": "Vazão medida",
+          "valor": "118 m³/h"
+        }
+      ],
+      "estado": "redução"
+    }
+  ],
+  "especificacoes_tecnicas": [
+    {
+      "parametro": "Pressão de evaporação",
+      "valor_medido": "4.2 bar",
+      "valor_nominal": "normal",
+      "unidade": "bar",
+      "status": "normal"
+    },
+    {
+      "parametro": "Pressão de condensação",
+      "valor_medido": "16.5 bar",
+      "valor_nominal": "13-14 bar",
+      "unidade": "bar",
+      "status": "elevado"
+    },
+    {
+      "parametro": "Superaquecimento",
+      "valor_medido": "8°C",
+      "valor_nominal": "6-10°C",
+      "unidade": "°C",
+      "status": "normal"
+    },
+    {
+      "parametro": "Subresfriamento",
+      "valor_medido": "4°C",
+      "valor_nominal": "6-8°C",
+      "unidade": "°C",
+      "status": "reduzido"
+    },
+    {
+      "parametro": "Corrente elétrica do compressor",
+      "valor_medido": "142 A",
+      "valor_nominal": "135 A",
+      "unidade": "A",
+      "status": "elevado"
+    }
+  ],
+  "problemas_relatados": [
+    {
+      "descricao": "Ruído excessivo do compressor principal",
+      "componente_afetado": "Compressor scroll",
+      "severidade": "alta",
+      "impacto": "Falha prematura do compressor por sobrecarga térmica"
+    },
+    {
+      "descricao": "Pressão de condensação elevada",
+      "componente_afetado": "Condensador a água",
+      "severidade": "alta",
+      "impacto": "Risco de parada não programada do sistema"
+    },
+    {
+      "descricao": "Temperatura de óleo do compressor alta",
+      "componente_afetado": "Compressor scroll",
+      "severidade": "alta",
+      "impacto": "Risco de parada não programada do sistema"
+    },
+    {
+      "descricao": "Vazão de água de resfriamento reduzida",
+      "componente_afetado": "Bomba de água de resfriamento",
+      "severidade": "alta",
+      "impacto": "Risco de parada não programada do sistema"
+    }
+  ],
+  "acoes_recomendadas": [
+    {
+      "descricao": "Reduzir carga térmica para 70% da capacidade",
+      "prioridade": "imediata",
+      "prazo": "0-24h",
+      "recursos_necessarios": []
+    },
+    {
+      "descricao": "Verificar e limpar filtro de linha da bomba de água",
+      "prioridade": "imediata",
+      "prazo": "0-24h",
+      "recursos_necessarios": []
+    },
+    {
+      "descricao": "Realizar limpeza química do condensador",
+      "prioridade": "curto_prazo",
+      "prazo": "24-72h",
+      "recursos_necessarios": [
+        "Kit de limpeza química para condensador"
+      ]
+    },
+    {
+      "descricao": "Verificar alinhamento e fixação da bomba BAR-100",
+      "prioridade": "curto_prazo",
+      "prazo": "24-72h",
+      "recursos_necessarios": []
+    },
+    {
+      "descricao": "Análise de óleo do compressor para verificar degradação",
+      "prioridade": "curto_prazo",
+      "prazo": "24-72h",
+      "recursos_necessarios": [
+        "Análise laboratorial de óleo (externa)"
+      ]
+    },
+    {
+      "descricao": "Substituir válvula de expansão se problema persistir",
+      "prioridade": "medio_prazo",
+      "prazo": "1-2 semanas",
+      "recursos_necessarios": [
+        "válvula de expansão VEE-40 (peça de reposição)"
+      ]
+    },
+    {
+      "descricao": "Calibração dos sensores de temperatura e pressão",
+      "prioridade": "medio_prazo",
+      "prazo": "1-2 semanas",
+      "recursos_necessarios": []
+    },
+    {
+      "descricao": "Atualização do firmware do PLC para versão 3.2.1",
+      "prioridade": "medio_prazo",
+      "prazo": "1-2 semanas",
+      "recursos_necessarios": []
+    }
+  ],
+  "informacoes_gerais": {
+    "data": "15/03/2024",
+    "equipamento": "Chiller modelo CFX-5000",
+    "local": "Sala de máquinas - Bloco B",
+    "responsavel": "Eng. Carlos Silva"
+  },
+  "informacoes_ambiguas": [
+    {
+      "item": "Estado do condensador",
+      "motivo": "Não especificado",
+      "sugestao": "Verificar estado físico e limpeza"
+    },
+    {
+      "item": "Estado da válvula de expansão eletrônica",
+      "motivo": "Não especificado",
+      "sugestao": "Verificar funcionamento e ajuste"
+    }
+  ]
+}
