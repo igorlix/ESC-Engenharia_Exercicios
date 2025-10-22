@@ -16,7 +16,7 @@ Desenvolvi um modelo classificador de spam com as etapas específicadas, as expl
 No geral, a solução não é muito complexa, principalmente por utilizar um dataset limpo (gostaria que todos fossem assim). Para spams em português, utilizo a api do google tradutor para traduzir e então classificá-los.
 
 
-### [Exercício 3:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio3_app_streamlit)
+### [Exercício 3:](https://github.com/igorlix/ESC-Engenharia_Exercicios/blob/main/exercicio3_app_streamlit/README.md)
 
 ![App](exercicio3_app_streamlit/modulos/app.png)
 
