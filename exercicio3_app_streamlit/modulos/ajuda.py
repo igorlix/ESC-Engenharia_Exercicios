@@ -1,7 +1,6 @@
 import streamlit as st
 
 def render(df=None):
-    """Renderiza a página Ajuda"""
     st.markdown("# <span style='color: #ff4b4b;'>Central de Ajuda</span>", unsafe_allow_html=True)
 
     st.markdown("""
@@ -124,7 +123,7 @@ def render(df=None):
     st.divider()
 
     # Seção: FAQ
-    st.markdown("## <span style='color: #ff8c42;'>Perguntas Frequentes (FAQ)</span>", unsafe_allow_html=True)
+    st.markdown("## <span style='color: #ff8c42;'>FAQ</span>", unsafe_allow_html=True)
 
     with st.expander("Qual o tamanho máximo de arquivo suportado?"):
         st.markdown("""

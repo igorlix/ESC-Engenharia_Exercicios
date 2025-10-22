@@ -4,15 +4,6 @@ import streamlit as st
 
 @st.cache_data
 def carregar_dataset_exemplo(nome):
-    """
-    Carrega um dataset de exemplo.
-
-    Args:
-        nome: Nome do dataset ('Iris' ou 'California Housing')
-
-    Returns:
-        DataFrame com o dataset carregado
-    """
     if nome == "Iris":
         dados = load_iris()
         df = pd.DataFrame(dados.data, columns=dados.feature_names)

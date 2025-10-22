@@ -1,24 +1,7 @@
-# Aplicação de Análise de Dados Interativa
+# Exercício 3 - Aplicação de Análise de Dados 
+Optei por não usar um arquivo único, pois ele estava muito extenso. "app.py" serve como main, os demais métodos estão na pasta "modulos".
 
-Aplicação web para análise exploratória de dados desenvolvida com Streamlit, Pandas e Plotly.
-
-## Funcionalidades
-
-### 6 Páginas Principais
-
-- **Início**: Resumo da aplicação e métricas gerais
-- **Visão Geral**: Visualização dos dados, informações de colunas e download
-- **Estatísticas**: 12 métricas estatísticas por coluna e histograma de distribuição
-- **Gráficos**: 5 tipos de visualizações interativas (Histograma, Dispersão, Box Plot, Correlação, Linha)
-- **Filtros**: Filtragem numérica e categórica com exportação
-- **Ajuda**: Guia de uso e FAQ
-
-### Recursos
-
-- Upload de CSV/Excel ou datasets de exemplo (Iris e California Housing)
-- 4 temas de gráficos (Padrão, Seaborn, Plotly, Simples)
-- Gráficos interativos com zoom, pan e download
-- Exportação de dados filtrados
+Não conhecia o streamlit e tirei muita coisa da ([documentação](https://docs.streamlit.io/)) e [galeria](https://streamlit.io/gallery), especialmente a parte de mostrar código fonte para os gráficos.
 
 ## Instalação
 
@@ -38,41 +21,27 @@ ou
 python -m streamlit run app.py
 ```
 
-A aplicação abrirá automaticamente em http://localhost:8501
+A aplicação abrirá em http://localhost:8501
 
-## Estrutura do Projeto
+## Funcionalidades
 
-```
-exercicio3_app_streamlit/
-├── app.py              # Aplicação principal
-├── utils.py            # Funções auxiliares
-├── modulos/            # Módulos das páginas
-│   ├── inicio.py
-│   ├── visao_geral.py
-│   ├── estatisticas.py
-│   ├── graficos.py
-│   ├── filtros.py
-│   └── ajuda.py
-└── requirements.txt
-```
+- **Início**: Resumo da aplicação e métricas gerais
+- **Visão Geral**: Visualização dos dados, informações de colunas e download
+- **Estatísticas**: 12 métricas estatísticas por coluna e histograma de distribuição
+- **Gráficos**: 5 tipos de visualizações interativas (Histograma, Dispersão, Box Plot, Correlação, Linha)
+- **Filtros**: Filtragem numérica e categórica com exportação
+- **Ajuda**: Guia de uso e FAQ
 
-## Tecnologias
+### Recursos
 
-- **Streamlit**: Framework web
-- **Pandas**: Manipulação de dados
-- **Plotly**: Visualizações interativas
-- **Scikit-learn**: Datasets de exemplo
-- **NumPy**: Computação numérica
+- Upload de CSV/Excel ou datasets de exemplo (Iris e California Housing)
+- 4 temas de gráficos (Padrão, Seaborn, Plotly, Simples)
+- Gráficos interativos com zoom, pan e download
+- Exportação de dados filtrados
 
-## Uso Básico
-
-1. **Carregar dados**: Use a sidebar para upload de arquivo ou selecione um dataset de exemplo
-2. **Navegar**: Escolha uma página no menu lateral
-3. **Analisar**: Explore estatísticas, visualizações e aplique filtros
-4. **Exportar**: Faça download dos dados completos ou filtrados
 
 ## Observações
 
-- Arquivos CSV e Excel suportados
-- Sessão mantida enquanto o navegador estiver aberto
-- Recomendado para datasets com colunas numéricas e categóricas
+- Arquivos CSV e Excel como entrada
+- A sessão mantida enquanto o navegador estiver aberto ou o terminal não for fechado.
+- Recomendo datasets com colunas numéricas e categóricas

@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 
 def render(df):
-    """Renderiza a página Filtros"""
     st.markdown("# <span style='color: #ff4b4b;'>Filtragem de Dados</span>", unsafe_allow_html=True)
 
     if df is not None:

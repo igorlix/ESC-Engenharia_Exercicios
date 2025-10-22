@@ -5,7 +5,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def render(df):
-    """Renderiza a página Gráficos"""
     st.markdown("# <span style='color: #ff4b4b;'>Visualizações Interativas</span>", unsafe_allow_html=True)
 
     if df is not None:

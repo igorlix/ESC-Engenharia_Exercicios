@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 def render(df):
-    """Renderiza a página Visão Geral"""
     st.markdown("# <span style='color: #ff4b4b;'>Visão Geral dos Dados</span>", unsafe_allow_html=True)
 
     if df is not None:

@@ -4,7 +4,6 @@ import numpy as np
 import plotly.graph_objects as go
 
 def render(df):
-    """Renderiza a página Estatísticas"""
     st.markdown("# <span style='color: #ff4b4b;'>Estatísticas Descritivas</span>", unsafe_allow_html=True)
 
     if df is not None:

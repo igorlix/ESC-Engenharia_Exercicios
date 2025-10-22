@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 
 def render(df):
-    """Renderiza a página Início"""
     st.markdown("# <span style='color: #ff4b4b;'>Aplicação de Análise de Dados</span>", unsafe_allow_html=True)
     st.markdown("Plataforma para análise exploratória de dados com visualizações interativas.")
 
