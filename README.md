@@ -18,6 +18,8 @@ No geral, a solução não é muito complexa, principalmente por utilizar um dat
 
 ### [Exercício 3:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio3_app_streamlit)
 
+![App:](exercicio3_app_streamlit\modulos\Captura de tela 2025-10-22 000852.png)
+
 Não conhecia o streamlit e gostei bastante. Demorei um pouco mais do que devia nessa etapa, mas fiquei satisfeito com o resultado, achei a solução funcional e bonita visualmente. 
 
 Caso tenha interesse este é o link do deploy pelo próprio streamlit: [exercicio3-app-streamlit](https://igorlix-esc-engenharia-exerc-exercicio3-app-streamlitapp-wktjjr.streamlit.app/)
