@@ -9,7 +9,7 @@ Este sistema de consulta de regulamentos técnicos utiliza RAG (Retrieval Augmen
 - **PyPDF**: Extração de texto de documentos PDF
 - **Python 3.8+**: Linguagem de programação
 
-A comunicação é através do terminal. Como citei no READEME principal, tentei criar uma interface para o assistente, mas não terminei a tempo. Mesmo assim, é completamente funcional.
+A comunicação é através do terminal. Como citei no README principal, tentei criar uma interface para o assistente, mas não terminei a tempo. Mesmo assim, é completamente funcional.
 
 ## Instalação
 
