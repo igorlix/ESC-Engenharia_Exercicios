@@ -1,6 +1,6 @@
 # Exercício 3 - Aplicação de Análise de Dados 
 
-![App:](exercicio3_app_streamlit\modulos\app.png)
+![App:](exercicio3_app_streamlit/modulos/app.png)
 
 Optei por não usar um arquivo único, pois ele estava muito extenso. "app.py" serve como main, os demais métodos estão na pasta "modulos".
 
