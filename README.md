@@ -20,7 +20,7 @@ No geral, a solução não é muito complexa, principalmente por utilizar um dat
 
 Não conhecia o streamlit e gostei bastante. Demorei um pouco mais do que devia nessa etapa, mas fiquei satisfeito com o resultado, achei a solução funcional e bonita visualmente. 
 
-Caso tenha interesse fiz o deploy pelo próprio streamlit: [exercicio3-app-streamlit](https://igorlix-esc-engenharia-exerc-exercicio3-app-streamlitapp-wktjjr.streamlit.app/)
+Caso tenha interesse este é o link do deploy pelo próprio streamlit: [exercicio3-app-streamlit](https://igorlix-esc-engenharia-exerc-exercicio3-app-streamlitapp-wktjjr.streamlit.app/)
 
 
 ### [Exercício 4:](https://github.com/igorlix/ESC-Engenharia_Exercicios/tree/main/exercicio4_bedrock)
