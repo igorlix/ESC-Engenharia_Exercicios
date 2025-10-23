@@ -21,10 +21,14 @@ pip install -r requirements.txt
 
 ### 2. Configuracao
 
-Os dados da API estão no arquivo .env
+Os dados da API estão no link:
+
+https://drive.google.com/file/d/1RB3BgLQ8CoeEO7RMkyLKPbjcmzotwz67/view?usp=drive_link
+
+Copie e cole no arquivo .env desse exercício
 
 ```
-AWS_BEARER_TOKEN_BEDROCK=egfsgsegsgegsgeehhser
+AWS_BEARER_TOKEN_BEDROCK=
 AWS_REGION=us-east-2
 AWS_INFERENCE_PROFILE_ID=us.amazon.nova-micro-v1:0
 ```

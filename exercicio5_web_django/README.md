@@ -14,6 +14,20 @@ Para aplicação web, como especificado, utilizei:
 
 Com relação a chave de api do LLM, estou usando a mesma do exercício 4.
 
+### Configuracao
+
+Os dados da API estão no link:
+- https://drive.google.com/file/d/1RB3BgLQ8CoeEO7RMkyLKPbjcmzotwz67/view?usp=drive_link
+
+Cole no arquivo .env desse exercício
+
+```
+AWS_BEARER_TOKEN_BEDROCK=
+AWS_REGION=us-east-2
+AWS_INFERENCE_PROFILE_ID=us.amazon.nova-micro-v1:0
+```
+
+
 
 ## Instalação
 
